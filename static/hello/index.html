@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center" style="min-height: 80vh;">
+        <div class="card" style="text-align: center; width: 100%; max-width: 500px;">
+            <h1>Hello Web UI Example</h1>
+            <p>This is a basic example showing how to bind a button to a Rust function.</p>
+            
+            <div style="margin: 20px 0;">
+                <button id="hello-btn" style="padding: 15px 30px; font-size: 16px; background-color: #007acc; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Say Hello
+                </button>
+            </div>
+            
+            <p style="color: #666; font-size: 14px;">
+                Check the terminal output when you click the button!
+            </p>
+        </div>
+    </div>
+
+    <script src="webui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
