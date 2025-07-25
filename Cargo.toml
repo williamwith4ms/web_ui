@@ -3,7 +3,7 @@ name = "web_ui"
 version = "0.1.0"
 edition = "2024"
 description = "A simple Rust library for creating web interfaces"
-license = ""
+license = "MIT"
 
 [[example]]
 name = "welcome"
