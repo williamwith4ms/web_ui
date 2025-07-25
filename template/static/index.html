@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web UI Component</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center" style="min-height: 80vh;">
+        <div class="card" style="text-align: center; width: 100%; max-width: 600px;">
+            <h1>Your Component Title</h1>
+            <p>Brief description of what this component does.</p>
+            
+            <!-- Connection Status (optional) -->
+            <div id="status" style="margin: 10px 0; font-size: 12px; padding: 5px;">
+                Connecting...
+            </div>
+            
+            <!-- Main Content Area -->
+            <div style="margin: 20px 0;">
+                
+                <!-- Example Button -->
+                <h3>Example Button</h3>
+                <button id="your-button-id" 
+                        style="padding: 15px 30px; font-size: 16px; background-color: #007acc; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">
+                    Click Me
+                </button>
+                
+                <!-- Example Input -->
+                <h3>Example Input</h3>
+                <div style="margin: 15px 0;">
+                    <label for="your-input-id" style="display: block; margin-bottom: 5px; font-weight: bold;">
+                        Input Field:
+                    </label>
+                    <input type="text" 
+                           id="your-input-id" 
+                           placeholder="Enter some text..." 
+                           style="padding: 10px; border: 1px solid #ddd; border-radius: 3px; width: 200px;">
+                </div>
+                
+                <!-- Example Form -->
+                <h3>Example Form</h3>
+                <form id="your-form-id" style="margin: 20px 0;">
+                    <div style="margin: 10px 0;">
+                        <label for="form-input-1" style="display: block; margin-bottom: 5px;">Name:</label>
+                        <input type="text" 
+                               id="form-input-1" 
+                               name="name" 
+                               required 
+                               style="padding: 8px; border: 1px solid #ddd; border-radius: 3px; width: 200px;">
+                    </div>
+                    
+                    <div style="margin: 10px 0;">
+                        <label for="form-input-2" style="display: block; margin-bottom: 5px;">Email:</label>
+                        <input type="email" 
+                               id="form-input-2" 
+                               name="email" 
+                               required 
+                               style="padding: 8px; border: 1px solid #ddd; border-radius: 3px; width: 200px;">
+                    </div>
+                    
+                    <button type="submit" 
+                            style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                        Submit Form
+                    </button>
+                </form>
+                
+            </div>
+            
+            <!-- Response/Output Area -->
+            <div id="response" 
+                 style="margin: 20px 0; padding: 15px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #e9ecef; min-height: 50px; text-align: left;">
+                <em style="color: #6c757d;">Response will appear here...</em>
+            </div>
+            
+            <!-- Live Status Example (optional) -->
+            <div style="margin: 15px 0;">
+                <strong>Live Status:</strong> 
+                <span id="live-status" style="color: #007acc; font-weight: bold;">
+                    Ready
+                </span>
+            </div>
+            
+            <!-- Help/Instructions -->
+            <div style="margin-top: 30px; padding: 15px; background-color: #e3f2fd; border-radius: 5px; border-left: 4px solid #2196f3;">
+                <h3 style="margin-top: 0; color: #1976d2;">Instructions:</h3>
+                <ul style="text-align: left; color: #555;">
+                    <li>Replace element IDs with your actual component IDs</li>
+                    <li>Update button text and styling to match your design</li>
+                    <li>Customize the response area layout</li>
+                    <li>Remove unused sections (status, form, etc.)</li>
+                    <li>Add your specific UI elements</li>
+                </ul>
+            </div>
+            
+            <!-- Usage Notes -->
+            <p style="color: #666; font-size: 14px; margin-top: 20px;">
+                Remember to implement corresponding Rust functions for all JavaScript event handlers!
+            </p>
+        </div>
+    </div>
+
+    <!-- WebUI Core Scripts -->
+    <script src="webui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

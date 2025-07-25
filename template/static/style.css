@@ -1,0 +1,100 @@
+body {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #89b3cc 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* Layout Components */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(79, 70, 229, 0.08);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 32px rgba(79, 70, 229, 0.12);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4f46e5;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #6366f1;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #7c3aed;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+/* Basic button styling - template uses inline styles */
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+    margin: 4px;
+}
+
+/* Basic form element styling - template uses inline styles */
+input, textarea, select {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #374151;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007acc;
+    box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #374151;
+}

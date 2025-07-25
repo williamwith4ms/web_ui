@@ -10,6 +10,10 @@ name = "welcome"
 path = "examples/welcome.rs"
 
 [[example]]
+name = "template"
+path = "template/template.rs"
+
+[[example]]
 name = "simple"
 path = "examples/simple.rs"
 
