@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Binding Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center" style="min-height: 80vh;">
+        <div class="card" style="text-align: center; width: 100%; max-width: 600px;">
+            <h1>Event Binding Demo</h1>
+            <p>This example demonstrates advanced event binding with state management and data exchange.</p>
+            
+            <!-- Demo buttons -->
+            <div style="margin: 20px 0;">
+                <button id="hello-btn" style="margin: 5px; padding: 10px 20px; background-color: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    Say Hello
+                </button>
+                <button id="count-btn" style="margin: 5px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    Count Clicks
+                </button>
+            </div>
+            
+            <!-- Input field -->
+            <div style="margin: 20px 0;">
+                <input type="text" id="name-input" placeholder="Enter your name" style="padding: 8px; margin: 5px; border: 1px solid #ddd; border-radius: 4px; width: 200px;">
+                <button id="greet-btn" style="padding: 8px 15px; background-color: #ffc107; color: #212529; border: none; border-radius: 4px; cursor: pointer;">
+                    Greet
+                </button>
+            </div>
+            
+            <!-- Response area -->
+            <div id="response" style="margin: 20px 0; padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; min-height: 60px; text-align: left;">
+                <em style="color: #6c757d;">Responses will appear here...</em>
+            </div>
+            
+            <!-- Status indicator -->
+            <div id="connection-status" style="margin-top: 20px; padding: 5px; font-size: 12px; color: #6c757d;">
+                <span id="ws-status">Connecting...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="webui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
