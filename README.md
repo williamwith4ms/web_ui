@@ -2,11 +2,26 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A simple Rust library for creating web interfaces for local programs.
+A simple Rust library for creating local web interfaces with real-time communication.
+
+## Features
+
+- **Easy to use** - Simple API for creating web UIs for Rust applications
+- **Real-time communication** - WebSocket support for instant updates
+- **HTTP fallback** - REST API endpoint for broader compatibility
+- **Static file serving** - Built-in server for HTML, CSS, and JavaScript files
+- **Event-driven** - Register handlers for UI events with type safety
+- **Async/await support** - Built on Tokio for high performance
 
 ## Quick Start
 
-Add crate to your `Cargo.toml`:
+Add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+web_ui = "0.1"
+tokio = { version = "1.0", features = ["full"] }
+```
 
 ### Basic Example
 

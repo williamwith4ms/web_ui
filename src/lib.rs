@@ -19,22 +19,25 @@
 //! ```rust
 //! use web_ui::{WebUI, WebUIConfig};
 //!
-//! #[tokio::main]
-//! async fn main() -> Result<(), Box<dyn std::error::Error>> {
-//!     let config = WebUIConfig::default()
-//!         .with_port(3030)
-//!         .with_title("My Web App".to_string());
+//! # async fn example() -> Result<(), Box<dyn std::error::Error>> {
+//! let config = WebUIConfig::default()
+//!     .with_port(3030)
+//!     .with_title("My Web App".to_string());
 //!
-//!     let webui = WebUI::new(config);
+//! let webui = WebUI::new(config);
 //!
-//!     // Bind a click event handler
-//!     webui.bind_click("my-button", || {
-//!         println!("Button clicked!");
-//!     }).await;
+//! // Bind a click event handler
+//! webui.bind_click("my-button", || {
+//!     println!("Button clicked!");
+//! }).await;
 //!
-//!     webui.run().await
-//! }
+//! // webui.run().await // This would start the server
+//! # Ok(())
+//! # }
 //! ```
+//! 
+//! Ensure that the `webui.js` file is included in your static files directory 
+//! - (https://raw.githubusercontent.com/williamwith4ms/web_ui/refs/heads/main/static/webui.js)
 //!
 //! ## Event System
 //!
@@ -268,19 +271,19 @@ impl WebUIConfig {
 /// ```rust
 /// use web_ui::{WebUI, WebUIConfig};
 ///
-/// #[tokio::main]
-/// async fn main() -> Result<(), Box<dyn std::error::Error>> {
-///     let config = WebUIConfig::default().with_port(3030);
-///     let webui = WebUI::new(config);
+/// # async fn example() -> Result<(), Box<dyn std::error::Error>> {
+/// let config = WebUIConfig::default().with_port(3030);
+/// let webui = WebUI::new(config);
 ///
-///     // Register event handlers
-///     webui.bind_click("button1", || {
-///         println!("Button 1 clicked!");
-///     }).await;
+/// // Register event handlers
+/// webui.bind_click("button1", || {
+///     println!("Button 1 clicked!");
+/// }).await;
 ///
-///     // Start the server
-///     webui.run().await
-/// }
+/// // Start the server (commented out for doctest)
+/// // webui.run().await
+/// # Ok(())
+/// # }
 /// ```
 pub struct WebUI {
     config: WebUIConfig,
@@ -299,8 +302,10 @@ impl WebUI {
     /// ```rust
     /// use web_ui::{WebUI, WebUIConfig};
     ///
+    /// # async fn example() {
     /// let config = WebUIConfig::default().with_port(8080);
     /// let webui = WebUI::new(config);
+    /// # }
     /// ```
     pub fn new(config: WebUIConfig) -> Self {
         Self { 
@@ -546,14 +551,14 @@ impl WebUI {
     /// ```rust
     /// use web_ui::{WebUI, WebUIConfig};
     ///
-    /// #[tokio::main]
-    /// async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    ///     let config = WebUIConfig::default().with_port(3030);
-    ///     let webui = WebUI::new(config);
-    ///     
-    ///     println!("Starting server...");
-    ///     webui.run().await
-    /// }
+    /// # async fn example() -> Result<(), Box<dyn std::error::Error>> {
+    /// let config = WebUIConfig::default().with_port(3030);
+    /// let webui = WebUI::new(config);
+    /// 
+    /// println!("Starting server...");
+    /// // webui.run().await // This would start the server
+    /// # Ok(())
+    /// # }
     /// ```
     pub async fn run(self) -> Result<(), Box<dyn std::error::Error>> {
         let addr = SocketAddr::from((self.config.host, self.config.port));

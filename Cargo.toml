@@ -1,9 +1,20 @@
 [package]
 name = "web_ui"
 version = "0.1.0"
-edition = "2024"
-description = "A simple Rust library for creating web interfaces"
+edition = "2021"
+authors = ["williammmm <me@williammmm.dev>"]
+description = "A simple Rust library for creating local web interfaces with real-time communication"
+documentation = "https://docs.rs/web_ui"
+homepage = "https://github.com/williamwith4ms/web_ui"
+repository = "https://github.com/williamwith4ms/web_ui"
 license = "MIT"
+keywords = ["web", "ui", "local", "websocket", "gui"]
+categories = ["web-programming", "gui"]
+exclude = [
+    "target/*",
+    ".git/*",
+    ".gitignore",
+]
 
 [[example]]
 name = "welcome"
@@ -14,12 +25,12 @@ name = "template"
 path = "template/template.rs"
 
 [[example]]
-name = "simple"
-path = "examples/simple.rs"
-
-[[example]]
 name = "event_binding"
 path = "examples/event_binding.rs"
+
+[[example]]
+name = "hello"
+path = "examples/hello.rs"
 
 [dependencies]
 axum = { version = "0.8", features = ["ws"] }
