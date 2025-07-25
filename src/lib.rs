@@ -36,8 +36,7 @@
 //! # }
 //! ```
 //! 
-//! Ensure that the `webui.js` file is included in your static files directory 
-//! - (https://raw.githubusercontent.com/williamwith4ms/web_ui/refs/heads/main/static/webui.js)
+//! Ensure that the `[webui.js](https://raw.githubusercontent.com/williamwith4ms/web_ui/refs/heads/main/static/webui.js)` file is included in your static files directory
 //!
 //! ## Event System
 //!
