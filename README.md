@@ -1,6 +1,10 @@
 # WebUI
 
+[![Crates.io](https://img.shields.io/crates/v/web_ui.svg)](https://crates.io/crates/web_ui)
+[![Documentation](https://docs.rs/web_ui/badge.svg)](https://docs.rs/web_ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://img.shields.io/crates/d/web_ui.svg)](https://crates.io/crates/web_ui)
+[![GitHub issues](https://img.shields.io/github/issues/williamwith4ms/web_ui.svg)](https://github.com/williamwith4ms/web_ui/issues)
 
 A simple Rust library for creating local web interfaces with real-time communication.
 
