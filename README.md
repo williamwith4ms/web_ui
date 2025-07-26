@@ -62,8 +62,23 @@ Create an `index.html` file in your static directory:
 </head>
 <body>
     <button id="hello-btn">Click Me!</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                // register event handlers for buttons here
+                if (window.webui) {
+                    window.webui.bindEvent('hello-btn', 'click', () => {
+                        console.log('Hello button clicked!');
+                    });
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>
+
 ```
 
 ## Configuration
